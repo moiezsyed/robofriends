@@ -1,12 +1,18 @@
+// Main JS script (entry file for our app; first thing read)
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// notice here that we didn't metnion "App.js"; because by default files without extensions are assumed to be JS files
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// The <App /> is just a JS function, which displays the REACT logo onto the screen
+// This can be changed to input any HTML element
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    {/* <h1>Hello World!</h1> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
