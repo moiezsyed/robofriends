@@ -1,4 +1,5 @@
 // Main JS script (entry file for our app; first thing read)
+// NPM packages should be defined inside the main JS file
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -6,6 +7,7 @@ import './index.css';
 import App from './App';
 import Hello from "./Hello"
 import reportWebVitals from './reportWebVitals';
+import 'tachyons'
 
 // The <App /> is just a react component, which displays the REACT logo onto the screen
 // This can be changed to input any HTML element or component
@@ -13,7 +15,8 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Hello />
+    {/* Components can have their own "props" i.e. properties defined here and accessed in it's JS file */}
+    <Hello greeting={"I'm a React Ninja"}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
