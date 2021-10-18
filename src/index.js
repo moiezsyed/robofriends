@@ -3,7 +3,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// notice here that we didn't metnion "App.js"; because by default files without extensions are assumed to be JS files
+// notice here that we didn't metnion "Card.js"; because by default files without extensions are assumed to be JS files
+import Card from "./Card"
 import reportWebVitals from './reportWebVitals';
 import 'tachyons'
 
@@ -13,7 +14,7 @@ import 'tachyons'
 
 ReactDOM.render(
   <React.StrictMode>
-
+      <Card />
   </React.StrictMode>,
   document.getElementById('root')
 );
