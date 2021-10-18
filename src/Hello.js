@@ -7,7 +7,8 @@ class Hello extends React.Component{
             // using tachyons directly in the JS file, by using "className" and not "class", as this is a JSX format and not CSS
             <div className='f1 tc'>
                 <h1>Hello World!</h1>
-                <p>React Ninja I Am</p>
+                {/* Accessing components property using the 'this.props' method */}
+                <p>{this.props.greeting}</p>
             </div>
         );
     }
