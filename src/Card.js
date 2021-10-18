@@ -1,7 +1,8 @@
 import React from "react";
 
 const Card = (props) => {
-    // destructuring props, which is a JSX object containing name, email, hobby & id in that order we listed in "index.js"
+    // destructuring props, which is a JSX object containing name, email, hobby & id properties
+    // props gives us all the properties used in the component
     const {name, email, hobby, id} = props;
     return (
         // "dib" tachyon property is used to get the items inline, i.e. on one line
