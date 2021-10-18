@@ -4,19 +4,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // notice here that we didn't metnion "App.js"; because by default files without extensions are assumed to be JS files
-import App from './App';
-import Hello from "./Hello"
 import reportWebVitals from './reportWebVitals';
 import 'tachyons'
 
 // The <App /> is just a react component, which displays the REACT logo onto the screen
 // This can be changed to input any HTML element or component
+// Components can have their own "props" i.e. properties defined here and accessed in it's JS file
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    {/* Components can have their own "props" i.e. properties defined here and accessed in it's JS file */}
-    <Hello greeting={"I'm a React Ninja"}/>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
