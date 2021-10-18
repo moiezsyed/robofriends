@@ -3,6 +3,7 @@ import './App.css';
 import React from 'react';
 
 // // Functional App
+// // render() method not required in component function
 // const App = () => {
 //   return (
 //     <div className="App">
