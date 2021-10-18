@@ -1,12 +1,16 @@
 import React from "react";
 
-const Card = () => {
+const Card = (props) => {
+    // destructuring props, which is a JSX object containing name, email, hobby & id in that order we listed in "index.js"
+    const {name, email, hobby, id} = props;
     return (
         <div>
-            <img src=" https://robohash.org/blabla" alt="robot"></img>
+            <img src={`https://robohash.org/${id}`} alt="robot"></img>
             <div>
-                <h2>John Doe</h2>
-                <p>John.Doe@robot.com</p>
+                {/* every time Card component is called in the "index.js" file, it's properties(props) will be read and used here */}
+                <h2>{name}</h2>
+                <p>{email}</p>
+                <p>{hobby}</p>
             </div>
         </div>
     )
