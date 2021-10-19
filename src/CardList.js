@@ -2,8 +2,7 @@ import React from "react"
 import Card from "./Card"
 
 // NOTE: could directly destructure our "robots" prop inside the argument to directly access the array
-const CardList = (props) => {
-    const robots = props.robots;
+const CardList = ({robots}) => {
     // use map method to loop over robots array (could also use forEach method)
     const cardComponent = robots.map((robot, index) => {
         // Card Component is called here (necessary to give exact names of props as used in the "Card" component)
