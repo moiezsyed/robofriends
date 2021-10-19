@@ -4,20 +4,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// notice here that we didn't metnion "CardList.js"; because by default files without extensions are assumed to be JS files
-import CardList from "./CardList"
 import reportWebVitals from './reportWebVitals';
 import 'tachyons'
-// multiple objects/functions can be imported by using curly braces
-import {robots} from "./robots"
+import App from "./App"
 
-// <Card /> is just a react COMPONENT
+// <App /> is just a react COMPONENT
 // This can be changed to input any HTML element or component
 // Components can have their own "props" i.e. properties defined here and accessed in it's JS file
 
 ReactDOM.render(
   <React.StrictMode>
-      <CardList robots={robots} />
+      <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
