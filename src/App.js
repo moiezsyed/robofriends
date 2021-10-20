@@ -16,7 +16,7 @@ class App extends React.Component{
         super()
         // describing the state of our React code (always done in the parent class, so the children can use it)
         this.state = {
-            robots: []],
+            robots: [],
             searchfield: ''
         };
     };
@@ -29,6 +29,19 @@ class App extends React.Component{
         this.setState({searchfield: event.target.value})
         console.log(event.target.value);
     };
+
+    componentDidMount() {
+        fetch("https://jsonplaceholder.typicode.com/users")
+            // we have to return the response in json format
+            .then(response => {
+                return response.json();
+            })
+            // we're getting users from the API by updating the state to the users from the API
+            // if this is not done, we don't get the users
+            .then(users => {
+                this.setState({robots: users})
+            });
+    }
 
     render() {
         // filter out the robots when searched for their names
