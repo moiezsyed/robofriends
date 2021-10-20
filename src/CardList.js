@@ -2,9 +2,9 @@ import React from "react"
 import Card from "./Card"
 
 // NOTE: could indirectly destructure our "robots" prop inside the function using "props.robots"
-const CardList = ({robots}) => {
+const CardList = ({filteredRobot}) => {
     // use map method to loop over robots array (could also use forEach method)
-    const cardComponent = robots.map((robot, index) => {
+    const cardComponent = filteredRobot.map((robot, index) => {
         // Card Component is called here (necessary to give exact names of props as used in the "Card" component)
         // "key" prop here is needed so that the virtual DOM recognizes each individual Card component from the other; without the "key" prop, the developer tool gives an error, and virtual DOM would have to erase everything if a Card component is deleted
         return (<Card key={index} name={robot.name} email={robot.email} profession={robot.profession} 
