@@ -2,10 +2,10 @@
 
 // notice here that we didn't mention "CardList.js"; because by default files without extensions are assumed to be JS files
 import React from "react"
-import CardList from "./CardList"
-import Searchbox from "./Searchbox"
-import Scroll from "./Scroll"
-import "./App.css"
+import CardList from "../components/CardList"
+import Searchbox from "../components/Searchbox"
+import Scroll from "../components/Scroll"
+import "../containers/App.css"
 
 // created class "App", which is parent class to all other component
 // classes that have state are known as "smart components"
