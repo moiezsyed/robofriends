@@ -20,7 +20,6 @@ class App extends React.Component {
             robots: [],
             searchfield: ''
         };
-        console.log("constructor");
     };
 
     // onChange is an event handler; where the events are input to the handler by means of a class method in this case
@@ -33,7 +32,6 @@ class App extends React.Component {
     };
 
     componentDidMount() {
-        console.log("componentDidMount");
         // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
         fetch("https://jsonplaceholder.typicode.com/users")
             // we have to return the response in json format & the response is returned only when the "promise" is fulfilled
@@ -50,7 +48,6 @@ class App extends React.Component {
     }
 
     render() {
-        console.log("render");
         // filter out the robots when searched for their names
         // this function links the two components
         const filteredRobot = this.state.robots.filter((robot) => {
