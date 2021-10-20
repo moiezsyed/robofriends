@@ -21,7 +21,7 @@ export const robots = [
     {
         name: "Madam Teresa",
         email: "Madam.Teresa@gmail.com",
-        profession: "Social Work",
+        profession: "Social Worker",
         id: 4042
     },
     {
