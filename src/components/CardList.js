@@ -3,6 +3,12 @@ import Card from "./Card"
 
 // NOTE: could indirectly destructure our "robots" prop inside the function using "props.robots"
 const CardList = ({filteredRobot}) => {
+
+    // // creating an error to check the "ErrorBoundary" component
+    // if (true){
+    //     throw new Error("NOOOOOOOOOOOOO!");
+    // }
+
     // use map method to loop over robots array (could also use forEach method)
     const cardComponent = filteredRobot.map((robot, index) => {
         // Card Component is called here (necessary to give exact names of props as used in the "Card" component)
