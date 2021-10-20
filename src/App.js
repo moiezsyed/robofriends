@@ -6,6 +6,7 @@ import CardList from "./CardList"
 import Searchbox from "./Searchbox"
 // multiple objects/functions can be imported by using curly braces
 import {robots} from "./robots"
+import "./App.css"
 
 // created class "App", which is parent class to all other component
 // all other classes, in this case "Searchbox" and "CardList" communicate through this parent class
@@ -32,6 +33,7 @@ class App extends React.Component{
 
     render() {
         // filter out the robots when searched for their names
+        // this function links the two components
         const filteredRobot = this.state.robots.filter((robot) => {
             // when returns true, it will return that robot details
             // https://www.w3schools.com/jsref/jsref_includes.asp
@@ -41,9 +43,9 @@ class App extends React.Component{
 
         return (
             <div className="tc">
-                <h1>RoboFriends</h1>
+                <h1 className="f1 light-green"> RoboFriends</h1>
                 <Searchbox change={this.onSearchChange}/>
-                <CardList robots={filteredRobot} />
+                <CardList filteredRobot={filteredRobot} />
             </div>
         )
     };
