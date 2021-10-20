@@ -4,6 +4,7 @@
 import React from "react"
 import CardList from "./CardList"
 import Searchbox from "./Searchbox"
+import Scroll from "./Scroll"
 import "./App.css"
 
 // created class "App", which is parent class to all other component
@@ -67,7 +68,9 @@ class App extends React.Component {
                 <div className="tc">
                     <h1 className="f1 light-green"> RoboFriends</h1>
                     <Searchbox change={this.onSearchChange} />
-                    <CardList filteredRobot={filteredRobot} />
+                    <Scroll> 
+                        <CardList filteredRobot={filteredRobot} />
+                    </Scroll>
                 </div>
             );
         }
