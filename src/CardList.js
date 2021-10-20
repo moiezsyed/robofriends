@@ -7,7 +7,7 @@ const CardList = ({filteredRobot}) => {
     const cardComponent = filteredRobot.map((robot, index) => {
         // Card Component is called here (necessary to give exact names of props as used in the "Card" component)
         // "key" prop here is needed so that the virtual DOM recognizes each individual Card component from the other; without the "key" prop, the developer tool gives an error, and virtual DOM would have to erase everything if a Card component is deleted
-        return (<Card key={index} name={robot.name} email={robot.email} profession={robot.profession} 
+        return (<Card key={index} name={robot.name} email={robot.email} website={robot.website} 
         id={robot.id} /> );
     })
     
