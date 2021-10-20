@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons'
-import App from "./App"
+import App from "./containers/App"
 
 // <App /> is just a react COMPONENT
 // This can be changed to input any HTML element or component
