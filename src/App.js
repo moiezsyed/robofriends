@@ -9,6 +9,7 @@ import "./App.css"
 
 // created class "App", which is parent class to all other component
 // classes that have state are known as "smart components"
+// smart components are the container of React, i.e. with life cycle hooks and state
 // all other classes, in this case "Searchbox" and "CardList" communicate through this parent class
 // "App" has states, which define our React code and are passed along to the child components as "props", i.e. all states can be used as props. It's like a binary tree structure, with the parent class ("App") being the root node
 class App extends React.Component {
