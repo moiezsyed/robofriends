@@ -5,6 +5,7 @@ import React from "react"
 import CardList from "../components/CardList"
 import Searchbox from "../components/Searchbox"
 import Scroll from "../components/Scroll"
+import ErrorBoundary from "../components/ErrorBoundary"
 import "../containers/App.css"
 
 // created class "App", which is parent class to all other component
@@ -65,8 +66,10 @@ class App extends React.Component {
                 <div className="tc">
                     <h1 className="f1 light-green"> RoboFriends</h1>
                     <Searchbox change={this.onSearchChange} />
-                    <Scroll> 
-                        <CardList filteredRobot={filteredRobot} />
+                    <Scroll>
+                        <ErrorBoundary>
+                            <CardList filteredRobot={filteredRobot} />
+                        </ErrorBoundary>
                     </Scroll>
                 </div>
             );
