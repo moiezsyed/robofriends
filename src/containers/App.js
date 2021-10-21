@@ -34,6 +34,7 @@ class App extends React.Component {
 
     componentDidMount() {
         // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+        // fetch API is a part of the "window" object in the web browser (can be checked in developer tools console)
         fetch("https://jsonplaceholder.typicode.com/users")
             // we have to return the response in json format & the response is returned only when the "promise" is fulfilled
             .then(response => {
